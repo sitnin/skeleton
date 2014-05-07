@@ -1,0 +1,32 @@
+{
+    "name": "skeleton",
+    "version": "1.0.0",
+    "description": "Express 4 webapp skeleton",
+    "license": "MIT",
+    "scripts": {
+        "test": "./node_modules/.bin/mocha -R spec",
+        "start": "DEBUG=* supervisor --extensions 'node|js|json|html' ./bin/www"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sitnin/skeleton.git"
+    },
+    "author": "Gregory Sitnin <greg@sitnin.com>",
+    "dependencies": {
+        "express": "~4.1.1",
+        "nunjucks": "~1.0.4",
+        "static-favicon": "~1.0.0",
+        "morgan": "~1.0.0",
+        "cookie-parser": "~1.0.1",
+        "body-parser": "~1.0.0",
+        "debug": "~0.7.4",
+        "errorhandler": "~1.0.0",
+        "response-time": "~1.0.0",
+        "express-session": "~1.0.4",
+        "mysql": "~2.2.0",
+        "express-mysql-session": "0.0.12"
+    },
+    "devDependencies": {
+        "mocha": ""
+    }
+}

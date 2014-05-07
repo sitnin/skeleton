@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+var config = require('../config.json');
+var pkgJson = require('../package.json');
+var util = require("util");
+var debug = require('debug')("webapp:"+pkgJson.name);
+var app = require('../webapp');
+
+app.set('host', config.bind.host);
+app.set('port', config.bind.port);
+
+var app_title = util.format("%s (%s)", pkgJson.name, pkgJson.description);
+process.title = app_title;
+
+var server = app.listen(app.get('port'), app.get('host'), function () {
+    debug(util.format("%s listening on http://%s:%s", app_title, app.get('host'), app.get('port')));
+    console.log(util.format("%s listening on http://%s:%s", app_title, app.get('host'), app.get('port')));
+});

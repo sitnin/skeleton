@@ -1,0 +1,28 @@
+{
+    "bind": {
+        "host": "127.0.0.1",
+        "port": 5400
+    },
+    "mysql": {
+        "host": "127.0.0.1",
+        "user": "username",
+        "password": "myKewlPassword",
+        "database": "database"
+    },
+    "cookie": {
+        "secret": "foobarbaz"
+    },
+    "session": {
+        "secret": "bazfoobar",
+        "proxy": true,
+        "cookie": {
+            "path": "/",
+            "httpOnly": true,
+            "secure": false,
+            "maxAge": null
+        }
+    },
+    "enabledApps": [
+        "homepage"
+    ]
+}
